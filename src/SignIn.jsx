@@ -47,6 +47,14 @@ const SignIn = () => {
 			console.error('Error during sign-in:', error);
 		}
 	};
+	const handleLogout = async () => {
+		try {
+			await signOut(auth);
+			navigate('/admin');
+		} catch (error) {
+			console.error('Error during logout:', error);
+		}
+	};
 
 	if (isAuthenticated) {
 		if (isAdmin) {
@@ -56,29 +64,7 @@ const SignIn = () => {
 				</>
 			);
 		} else {
-			return (
-				<>
-					<button className='logOutBut' onClick={handleLogout}>
-						Logout
-					</button>
-					<div className='linkNotFoundCon'>
-						<p className='linkNotFound'>You don't have acces to this page</p>
-						<div className='copyDown'>
-							<div className='aboutMeContainer'>
-								Design And Coded By
-								<p>
-									<a
-										href='https://www.linkedin.com/in/mr-sasikumar-k/'
-										target='_blank'
-									>
-										SASIKUMAR K
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</>
-			);
+			handleLogout();
 		}
 	}
 
