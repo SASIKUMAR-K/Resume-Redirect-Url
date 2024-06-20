@@ -6,6 +6,7 @@ import Link from './Link'; // Assuming Link is a component you created
 import Loading from './img/loading.gif';
 import './css/redirect.css';
 import CopyRight from './CopyRight';
+import downArrow from './img/downArrow.png';
 
 const Redirect = () => {
 	const { linkUrl } = useParams();
@@ -55,7 +56,11 @@ const Redirect = () => {
 		<div>
 			{linkItem ? (
 				<>
-					<div className='sasiHeading'>Sasikumar's Resume Link Page</div>
+					<div className='sasiHeading'>Sasikumar's Resume Link</div>
+					<div className='downArrow'>
+						<p>Click Here</p>
+						<img src={downArrow} alt='Arrow' />
+					</div>
 					<div className='redirectLinkFou'>
 						<div className='redirectLink'>
 							<Link linkName={linkItem.name} link={linkItem.link} />

@@ -60,7 +60,7 @@ const LinkContainer = () => {
 
 	return (
 		<div>
-			<div className='sasiHeading'>Sasikumar's Resume Link Page</div>
+			<div className='sasiHeading'>Sasikumar's Resume Link</div>
 			{resumeLinks.map((item) => (
 				<Link key={item.id} linkName={item.name} link={item.link} />
 			))}

@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "sasurl"
-  }
+  },
+  "targets": {
+    "sasurl": {
+      "hosting": {
+        "sasurl": [
+          "sasurl"
+        ],
+        "showlink": [
+          "showlink"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

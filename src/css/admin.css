@@ -79,6 +79,10 @@
     font-size: 15px;
     font-weight: 500;
 }
+.resume-link div{
+    word-break: break-all;
+    word-wrap: break-word;
+}
 .resume-link > *{
     margin: 10px 0px;
 
